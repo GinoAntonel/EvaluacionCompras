@@ -29,7 +29,6 @@
                             <input type="text" name="texto" class="form-control" placeholder="Que compro?" aria-label="Recipient's username with two button addons" aria-describedby="button-addon4">
                             <div class="input-group-append" id="button-addon4">
                                 <button type="submit" class="btn btn-outline-secondary">Send</button>
-                                <!--                            <button type="submit2" class="btn btn-outline-secondary">Borrar</button>-->
                             </div>
 
                         </div>
@@ -51,8 +50,7 @@
                     {% if not cm.archived %}
                         <tbody>
                             <tr>
-                                <th scope="row" class="text-white">{{cm.fecha | date:"d/m/Y " }}
-                                    <!--h:m:s-->
+                                <th scope="row" class="text-white">{{cm.fecha | date:"d/m/Y " }} {{ cm.fecha | time:"h:i"}}                                    <!--h:m:s-->
                                 </th>
                                 <td class="text-white">{{cm.texto}}</td>
 
